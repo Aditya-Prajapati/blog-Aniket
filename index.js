@@ -6,11 +6,13 @@ const app = express();
 app.use(express.json())
 app.use(cors())
 
-mongoose.connect(`mongodb+srv://aditya:Fdsa4321@cluster0.kbryens.mongodb.net/blog-data-aniket`)
+// mongoose.connect(`mongodb+srv://aditya:Fdsa4321@cluster0.kbryens.mongodb.net/blog-data-aniket`)
+mongoose.connect("mongodb+srv://bloguser:bloguser@cluster0.pzyg7m3.mongodb.net/Blogdata")
 .then(()=>{
     console.log('successfully connected to data base')
 })
 .catch((e)=>{
+    console.log(e);
    console.log('failed to connect to databse')
 })
 
